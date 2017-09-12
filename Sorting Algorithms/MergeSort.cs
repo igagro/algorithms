@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MergeSort
+namespace SortingAlgorithms
 {
     class MergeSort
     {
@@ -62,20 +62,6 @@ namespace MergeSort
 
                 Merge(numbers, left, (mid + 1), right);
             }
-        }
-
-        // Main method for testing above solution
-        static void Main(string[] args)
-        {
-            // Add integers separated by space
-            var temp = Console.ReadLine().Split(' ');
-            var n = Array.ConvertAll(temp, int.Parse);
-            MergeSortRecursive(n, 0, n.Length - 1);
-            foreach (var number in n)
-            {
-                Console.Write(number + " ");
-            }
-            Console.ReadLine();
         }
     }
 }

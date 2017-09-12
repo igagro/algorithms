@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace QuickSort
+namespace SortingAlgorithms
 {
     class QuickSort
     {
@@ -126,22 +126,6 @@ namespace QuickSort
             }
             int[] m = { lt, gt };
             return m;
-        }
-
-
-        // Main method for testing above solutions
-        static void Main(string[] args)
-        {
-            //Add numbers separated by space
-            var temp = Console.ReadLine().Split(' ');
-            var a = Array.ConvertAll(temp, int.Parse);
-            QuickSortRandmomPivot3Partition(a, 0, a.Length - 1);
-
-            foreach (var number in a)
-            {
-                Console.Write(number + " ");
-            }
-            Console.ReadLine();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace SelectionSort
+namespace SortingAlgorithms
 {
     class SelectionSort
     {
@@ -23,23 +23,6 @@ namespace SelectionSort
                 a[minIndex] = temp;
             }
             return a;
-        }
-
-        // Main method for testing solution
-        static void Main(string[] args)
-        {
-            // Add integers separated by space
-            var temp = Console.ReadLine().Split(' ');
-            var a = Array.ConvertAll(temp, int.Parse);
-            var result = SelectionSort(a);
-            var sb = new StringBuilder();
-
-            foreach (var number in result)
-            {
-                sb.Append(number + " ");
-            }
-            Console.WriteLine(sb.ToString());
-            Console.ReadLine();
         }
     }
 }

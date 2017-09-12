@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CountSort
+namespace SortingAlgorithms
 {
     class CountSort
     {
@@ -26,22 +26,6 @@ namespace CountSort
                 c[a[i]] -= 1; // decrement value in index of arr c, which is equal as a[i], by one
             }
             return b;
-        }
-
-        // Main method for testing above solution
-        static void Main(string[] args)
-        {
-            // Add integers separated by space
-            var temp = Console.ReadLine().Split(' ');
-            var a = Array.ConvertAll(temp, int.Parse);
-            // Number of distinct integers
-            int m = int.Parse(Console.ReadLine());
-            var result = CountSort(a, m);
-            foreach (var number in result)
-            {
-                Console.Write(number + " ");
-            }
-            Console.ReadLine();
-        }
+        }       
     }
 }
