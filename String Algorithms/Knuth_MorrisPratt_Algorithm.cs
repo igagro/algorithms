@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StringAlgorithms
 {
-    class KnuthMorrisPrattAlgorithm
+    class Knuth_Morris_Pratt_Algorithm
     {
         // First version of solution
         static void KMP1(string pattern, string text)

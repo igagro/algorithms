@@ -2,7 +2,7 @@
 
 namespace SearchAlgorithms
 {
-    class BinarySearch
+    class Binary_Search
     {
         //Recursive algorithm
         int BinarySearch(int[] a, int low, int high, int key)

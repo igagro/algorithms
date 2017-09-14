@@ -3,7 +3,7 @@ using System.Text;
 
 namespace SortingAlgorithms
 {
-    class SelectionSort
+    class Selection_Sort
     {
        static int[] SelectionSort(int[] a)
         {

@@ -6,44 +6,59 @@ using System.Threading.Tasks;
 
 namespace StringAlgorithms
 {
-    class PatternMatching
+    class LCP_Array
     {
-        static void PatternMatching(string text, string pattern, int[] suffixArray, int minIndex, int maxIndex, HashSet<int> result)
+        // Note : int[] order = BuildSuffixArray(string text)
+        static int[] LCPArray(string text, int[] order)
         {
-            int m = pattern.Length;
-            while (minIndex < maxIndex)
+            var n = text.Length - 1;
+            var lcpArray = new int[n];
+            var lcp = 0;
+            var posInOrder = InvertSuffixArray(order);
+            var suffix = order[0];
+            for (int i = 0; i <= n; i++)
             {
-                var midIndex = (minIndex + maxIndex) / 2;
-                var compare = string.Compare(pattern, 0, text, suffixArray[midIndex], text.Length - suffixArray[midIndex]); // compare pattern with the middle suffix in suffix array
-                if (compare > 0) // if pattern is bigger move to the second half
+                var orderIndex = posInOrder[suffix];
+                if (orderIndex == n)
                 {
-                    minIndex = midIndex + 1;
+                    lcp = 0;
+                    suffix = (suffix + 1) % text.Length;
+                    continue;
                 }
-                else // if less move to first half
-                {
-                    maxIndex = midIndex;
-                }
+                var nextSuffix = order[orderIndex + 1];
+                lcp = LCPOfSuffixes(text, suffix, nextSuffix, lcp - 1);
+                lcpArray[orderIndex] = lcp;
+                suffix = (suffix + 1) % text.Length;
             }
-            var start = minIndex; // first index with pattern matching, now let's look for the end index
-            maxIndex = text.Length - 1;
-            while (minIndex <= maxIndex)
+            return lcpArray;
+        }
+
+        static int[] InvertSuffixArray(int[] order)
+        {
+            var pos = new int[order.Length];
+            for (int i = 0; i < pos.Length; i++)
             {
-                var midIndex = (minIndex + maxIndex) / 2;
-                var compare = string.Compare(pattern, 0, text, suffixArray[midIndex], m);
-                if (compare == 0) // if pattern is equal with the middle suffix in suffix array
+                pos[order[i]] = i;
+            }
+            return pos;
+        }
+
+        static int LCPOfSuffixes(string text, int i, int j, int equal)
+        {
+            var n = text.Length;
+            var lcp = Math.Max(0, equal);
+            while (i + lcp < n && j + lcp < n)
+            {
+                if (text[i + lcp] == text[j + lcp])
                 {
-                    minIndex = midIndex + 1; // move to second half
+                    lcp++;
                 }
                 else
                 {
-                    maxIndex = midIndex - 1;
+                    break;
                 }
             }
-            var end = maxIndex; // last index of pattern matching
-            for (int i = start; i <= end; i++) // add all indices where pattern matching occurs
-            {
-                result.Add(suffixArray[i]);
-            }
+            return lcp;
         }
 
         static int[] BuildSuffixArray(string text)

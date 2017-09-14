@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StringAlgorithms
 {
-    class SuffixTreeFromSuffixArr
+    class Suffix_Tree_From_Suffix_Arr
     {
         //STfromSA
         // Note : int[] order = BuildSuffixArray(string text)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GraphAlgorithm
 {
-    class Dijkstras
+    class Dijkstra_s
     {
         // List<int>[] is array of lists and every list contains adjancet vertices of i-th vertice in directed graph
         // Cost is list of distances from vertice "u" to adjancet vertice "v"

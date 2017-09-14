@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace StringAlgorithms
 {
-    class TrieOfPatterns
+    class Trie_Of_Patterns
     {
         static List<Dictionary<char, int>> TrieConstruction(List<string> patterns)
         {

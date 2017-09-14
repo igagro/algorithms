@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace StringAlgorithms
 {
-    class SuffixArrays
+    class Suffix_Arrays
     {
         static IOrderedEnumerable<Suffix> SuffixArrays(string text)
         {

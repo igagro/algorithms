@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GraphAlgorithms
 {
-    class BreadthFirstSearch
+    class Breadth_First_Search
     {
         // List<int>[] is array of lists and every list contains adjancet vertices of i-th vertice
         static int BreadthFirstSearch(List<int>[] adj, int x, int y)

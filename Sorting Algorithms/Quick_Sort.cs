@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SortingAlgorithms
 {
-    class QuickSort
+    class Quick_Sort
     {
         static Random rnd = new Random();      
 

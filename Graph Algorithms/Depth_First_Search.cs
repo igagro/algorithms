@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GraphAlgorithms
 {
-    class DepthFirstSearch
+    class Depth_First_Search
     {
         // List<int>[] is array of lists and every list contains adjancet vertices of i-th vertice
         static List<int> TopologicalSort(List<int>[] adj, bool[] visited)

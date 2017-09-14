@@ -2,7 +2,7 @@
 
 namespace SortingAlgorithms
 {
-    class MergeSort
+    class Merge_Sort
     {
         static void Merge(int[] numbers, int left, int mid, int right)
         {

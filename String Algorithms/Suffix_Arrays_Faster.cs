@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace StringAlgorithms
 {
-    class SuffixArraysFaster
+    class Suffix_Arrays_Faster
     {
         static int[] BuildSuffixArray(string text)
         {

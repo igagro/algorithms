@@ -2,7 +2,7 @@
 
 namespace SortingAlgorithms
 {
-    class CountSort
+    class Count_Sort
     {
         static int[] CountSort(int[] a, int m)
         {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GraphAlgorithms
 {
-    class KruskalAlgorithm
+    class Kruskal_Algorithm
     { 
         class Edge
         {

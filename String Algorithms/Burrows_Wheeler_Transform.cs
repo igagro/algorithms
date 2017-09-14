@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace StringAlgorithms
 {
-    class BurrowsWheelerTransform
+    class Burrows_Wheeler_Transform
     {
         static string BWT(string text)
         {

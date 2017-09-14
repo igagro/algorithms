@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Prim
 {
-    class PrimAlgorithm
+    class Prim_Algorithm
     {
         // List<int>[] is array of lists and every list contains adjancet vertices of i-th vertice in undirected graph
         // Cost is list of distances from vertice "u" to adjancet vertice "v"

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GraphAlgorithm
 {
-    class BellmanFord
+    class Bellman_Ford
     {
         static int BellmanFord(List<int>[] adj, List<int>[] cost, int infinite)
         {
